@@ -2748,7 +2748,7 @@ footer{
 .heritage-tree-caption{
   position:absolute;
   left:22px;
-  right:22px;
+  right:140px;
   bottom:18px;
   z-index:2;
 }
@@ -2937,7 +2937,7 @@ footer{
 .heritage-tree-caption{
   position:absolute;
   left:24px;
-  right:24px;
+  right:140px;
   bottom:20px;
   z-index:2;
 }
@@ -3141,7 +3141,7 @@ footer{
 .heritage-tree-caption{
   position:absolute;
   left:24px;
-  right:24px;
+  right:140px;
   bottom:22px;
   z-index:2;
 }
@@ -3365,7 +3365,9 @@ footer{
     width:82px;
     right:10px;
     bottom:10px;
+    z-index:7;
   }
+  .heritage-tree-caption{right:100px;left:16px;bottom:12px}
 }
 
 /* ===== Galerie Bilder klickbar ===== */
@@ -11431,6 +11433,9 @@ a.hero-award-text:hover{opacity:.85;transform:translateY(-1px)}
   #page-shop .assurance77{grid-template-columns:1fr}
   #page-shop .as77:nth-child(2){border-top:1px solid rgba(212,175,82,.16)}
   #page-shop .concierge77{padding:38px 24px}
+  #page-shop .ctl77-sort{gap:8px}
+  #page-shop .ctl77-sort>span{font-size:.55rem;white-space:nowrap}
+  #page-shop .ctl77-sort select{font-size:.62rem;padding:10px 34px 10px 12px;background-position:right 10px center;max-width:100%;box-sizing:border-box}
 }
 @media(prefers-reduced-motion:reduce){
   #page-shop .product-card{animation:none}
