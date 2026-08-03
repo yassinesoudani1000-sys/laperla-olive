@@ -2,3 +2,4 @@ node_modules/
 .next/
 *.html
 session-*.md
+public/images/
