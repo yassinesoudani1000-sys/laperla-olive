@@ -10092,6 +10092,7 @@ footer{
   background:linear-gradient(90deg,transparent,#ffc53a 18%,#fff0a5 50%,#ffc53a 82%,transparent);
   filter:blur(9px);
   opacity:.95;
+  pointer-events:none;
   box-shadow:0 0 18px #ffbd2f,0 0 34px rgba(255,169,24,.75);
 }
 .pv-badge{
@@ -10114,7 +10115,7 @@ footer{
 .pv-middle .pv-badge{display:block}
 .pv-copy{
   position:relative;
-  z-index:2;
+  z-index:3;
   padding:38px 0 26px 28px;
   display:flex;
   flex-direction:column;
@@ -10200,7 +10201,7 @@ footer{
 
 .pv-product-visual{
   position:relative;
-  z-index:2;
+  z-index:1;
   min-width:0;
   display:flex;
   align-items:flex-end;
@@ -10216,6 +10217,7 @@ footer{
   border-radius:50%;
   background:rgba(0,0,0,.72);
   filter:blur(8px);
+  pointer-events:none;
 }
 .pv-bottle{
   position:relative;
@@ -10249,6 +10251,7 @@ footer{
   width:190px;
   height:390px;
   opacity:.30;
+  pointer-events:none;
   background-image:url("data:image/svg+xml,%0A%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20220%20420%27%3E%0A%20%20%3Cg%20fill%3D%27none%27%20stroke%3D%27%23d4a846%27%20stroke-width%3D%271.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%0A%20%20%20%20%3Cpath%20d%3D%27M26%20392%20C62%20320%2094%20250%20118%20170%20C137%20108%20154%2056%20183%2020%27/%3E%0A%20%20%20%20%3Cpath%20d%3D%27M51%20337%20C83%20328%20105%20309%20120%20281%27/%3E%0A%20%20%20%20%3Cpath%20d%3D%27M73%20293%20C104%20286%20127%20267%20142%20238%27/%3E%0A%20%20%20%20%3Cpath%20d%3D%27M93%20246%20C123%20239%20146%20220%20160%20190%27/%3E%0A%20%20%20%20%3Cpath%20d%3D%27M111%20201%20C140%20194%20160%20177%20174%20150%27/%3E%0A%20%20%20%20%3Cpath%20d%3D%27M127%20158%20C151%20151%20170%20136%20181%20114%27/%3E%0A%20%20%20%20%3Cpath%20d%3D%27M144%20117%20C164%20111%20179%2099%20188%2082%27/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2755%27%20cy%3D%27332%27%20rx%3D%2710%27%20ry%3D%2724%27%20transform%3D%27rotate%28-59%2055%20332%29%27/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2783%27%20cy%3D%27302%27%20rx%3D%2710%27%20ry%3D%2724%27%20transform%3D%27rotate%28-48%2083%20302%29%27/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%27100%27%20cy%3D%27274%27%20rx%3D%2710%27%20ry%3D%2724%27%20transform%3D%27rotate%28-64%20100%20274%29%27/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%27125%27%20cy%3D%27248%27%20rx%3D%2710%27%20ry%3D%2724%27%20transform%3D%27rotate%28-42%20125%20248%29%27/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%27118%27%20cy%3D%27220%27%20rx%3D%2710%27%20ry%3D%2724%27%20transform%3D%27rotate%28-66%20118%20220%29%27/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%27147%27%20cy%3D%27196%27%20rx%3D%2710%27%20ry%3D%2724%27%20transform%3D%27rotate%28-41%20147%20196%29%27/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%27139%27%20cy%3D%27167%27%20rx%3D%2710%27%20ry%3D%2723%27%20transform%3D%27rotate%28-64%20139%20167%29%27/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%27165%27%20cy%3D%27143%27%20rx%3D%279%27%20ry%3D%2722%27%20transform%3D%27rotate%28-38%20165%20143%29%27/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%27158%27%20cy%3D%27117%27%20rx%3D%279%27%20ry%3D%2721%27%20transform%3D%27rotate%28-61%20158%20117%29%27/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%27181%27%20cy%3D%2795%27%20rx%3D%278%27%20ry%3D%2720%27%20transform%3D%27rotate%28-34%20181%2095%29%27/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%27102%27%20cy%3D%27325%27%20r%3D%274%27/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%27130%27%20cy%3D%27270%27%20r%3D%274%27/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%27153%27%20cy%3D%27218%27%20r%3D%274%27/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A");
   background-repeat:no-repeat;
   background-position:center;
@@ -10415,6 +10418,8 @@ footer{
   .pv-price{font-size:26px!important}
   .pv-unit{font-size:9px!important;margin-top:2px!important}
   .pv-actions{
+    position:relative!important;
+    z-index:5!important;
     display:flex!important;
     flex-direction:row!important;
     gap:8px!important;
@@ -10424,6 +10429,9 @@ footer{
     align-items:center!important;
   }
   .pv-actions .btn,.pv-details,.pv-cart{
+    position:relative!important;
+    z-index:6!important;
+    pointer-events:auto!important;
     flex:1!important;
     max-width:none!important;
     height:36px!important;
