@@ -368,8 +368,8 @@ export const PRODUCTS = [
     notes: 'Das Flaggschiff der Édition Prestige — überreicht in der schwarzen Geschenkbox. Limitierte Charge.',
     price: 50,
     litres: 0.5,
-    img: '/images/img_004.webp',
-    images: ['/images/img_004.webp'],
+    img: '/images/vestige_premium.webp',
+    images: ['/images/vestige_premium.webp'],
     available: true,
     description:
       'La Pièce Maîtresse der Kollektion: die Vestige 500 ml, überreicht in einer schwarzen Geschenkbox mit feiner Goldprägung. Diese limitierte Charge vereint das prämierte Flaggschiff-Öl der Édition Prestige mit einer Verpackung, die jedes Öffnen zum Ritual macht. Für Momente, in denen nur das Beste gut genug ist.',
