@@ -55,28 +55,21 @@
 .pdp-back:hover { color: var(--gold-bright); }
 .pdp-back:hover svg { transform: translateX(-3px); }
 
-.pdp-brand {
+.pdp-logo {
   justify-self: center;
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
-  line-height: 1;
-  padding: 2px 14px;
+  line-height: 0;
+  cursor: pointer;
+  transition: opacity 0.3s;
 }
-.pdp-brand-name {
-  font-family: var(--script);
-  font-size: 1.9rem;
-  line-height: 1.1;
-  padding: 0 0.12em 0.04em;
-  color: #e8c76f;
-  text-shadow: 0 6px 26px rgba(212, 175, 82, 0.4);
-}
-.pdp-brand-sub {
-  font-family: var(--display);
-  font-size: 0.42rem;
-  letter-spacing: 0.34em;
-  text-transform: uppercase;
-  color: rgba(212, 175, 82, 0.85);
+.pdp-logo:hover { opacity: 0.85; }
+.pdp-logo:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 3px; border-radius: 4px; }
+.pdp-logo-img {
+  height: 80px;
+  width: auto;
+  filter: drop-shadow(0 4px 12px rgba(212, 175, 82, 0.25));
+  transition: height 0.4s;
 }
 
 .pdp-cart {
@@ -104,24 +97,110 @@
   align-items: center;
   gap: 12px;
 }
-.pdp-lang {
-  appearance: none;
-  -webkit-appearance: none;
-  padding: 8px 26px 8px 12px;
+.pdp-lang-switch {
+  position: relative;
+}
+.pdp-lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
   border: 1px solid rgba(212, 175, 82, 0.45);
-  border-radius: 999px;
-  background: rgba(212, 175, 82, 0.06) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23d4af52' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 10px center;
+  border-radius: 2px;
+  background: rgba(212, 175, 82, 0.06);
   color: var(--gold-pale);
   font: inherit;
   font-size: 0.68rem;
   letter-spacing: 0.12em;
+  font-weight: 600;
   cursor: pointer;
   transition: border-color 0.3s, background 0.3s;
+  white-space: nowrap;
 }
-.pdp-lang:hover { border-color: var(--gold-bright); background-color: rgba(212, 175, 82, 0.14); }
-.pdp-lang:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
-.pdp-lang option { background: #0d1511; color: var(--gold-pale); }
-[dir="rtl"] .pdp-lang { padding: 8px 12px 8px 26px; background-position: left 10px center; }
+.pdp-lang-btn:hover {
+  border-color: var(--gold-deep);
+  background: rgba(212, 175, 82, 0.14);
+}
+.pdp-lang-globe { color: var(--gold-deep); flex-shrink: 0; }
+.pdp-lang-caret { font-size: 0.65rem; color: var(--gold-deep); line-height: 1; }
+.pdp-lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 300px;
+  max-height: 380px;
+  overflow-y: auto;
+  background: linear-gradient(180deg, #13100a, #0f0c08);
+  border: 1px solid rgba(212, 175, 82, 0.5);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.6);
+  z-index: 95;
+  padding: 0;
+}
+.pdp-lang-menu::-webkit-scrollbar { width: 6px; }
+.pdp-lang-menu::-webkit-scrollbar-track { background: rgba(212, 175, 82, 0.06); }
+.pdp-lang-menu::-webkit-scrollbar-thumb { background: rgba(212, 175, 82, 0.4); border-radius: 3px; }
+.pdp-lang-menu-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid rgba(212, 175, 82, 0.3);
+  background: linear-gradient(160deg, rgba(212, 175, 82, 0.12), rgba(212, 175, 82, 0.03));
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.pdp-lmh-title {
+  font-size: 0.6rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  font-weight: 700;
+}
+.pdp-lmh-count {
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
+  color: rgba(246, 241, 228, 0.5);
+}
+.pdp-lang-menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  padding: 6px;
+}
+.pdp-lang-opt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  border-radius: 2px;
+  color: rgba(246, 241, 228, 0.7);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  transition: background 0.22s, color 0.22s;
+}
+.pdp-lang-opt:hover { background: rgba(212, 175, 82, 0.14); color: var(--gold-pale); }
+.pdp-lang-opt.active { background: rgba(212, 175, 82, 0.2); color: var(--gold-bright); font-weight: 600; }
+.pdp-lo-code {
+  flex: 0 0 auto;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--gold-deep);
+  border: 1px solid rgba(212, 175, 82, 0.45);
+  padding: 2px 4px;
+  min-width: 24px;
+  text-align: center;
+  border-radius: 2px;
+  background: rgba(212, 175, 82, 0.06);
+}
+.pdp-lang-opt.active .pdp-lo-code { background: var(--gold-deep); color: #13100a; border-color: var(--gold-deep); }
+.pdp-lo-name { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+[dir="rtl"] .pdp-lang-menu { right: auto; left: 0; }
 
 /* ---------- Anti-flash i18n : masque les textes traduisibles
    tant que la langue de l'utilisateur (≠ DE) n'est pas appliquée ---------- */
@@ -228,8 +307,8 @@ html.pdp-i18n-loading [data-pd-medal] {
 .pdp-stage img {
   position: relative;
   z-index: 1;
-  max-height: 500px;
-  max-width: 72%;
+  max-height: 540px;
+  max-width: 85%;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 30px 36px rgba(0, 0, 0, 0.75));
@@ -844,6 +923,7 @@ html.pdp-i18n-loading [data-pd-medal] {
 }
 .pdp-footer nav a:hover { color: var(--gold-bright); }
 .pdp-footer small { font-size: 0.7rem; color: rgba(246, 241, 228, 0.4); font-weight: 300; }
+.pdp-footer .pdp-logo-img { height: 60px; opacity: 0.85; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
@@ -856,7 +936,7 @@ html.pdp-i18n-loading [data-pd-medal] {
 @media (max-width: 720px) {
   .pdp-top { padding: 10px 16px; }
   .pdp-back span { display: none; }
-  .pdp-brand-name { font-size: 1.55rem; }
+  .pdp-logo-img { height: 58px; }
   .pdp-breadcrumb { padding-top: 22px; font-size: 0.58rem; gap: 8px; }
   .pdp-master { margin-top: 12px; }
   .pdp-stage { min-height: 380px; }
@@ -875,6 +955,11 @@ html.pdp-i18n-loading [data-pd-medal] {
   .pdp-related-grid { grid-template-columns: 1fr; }
   .pdp-rel-media { min-height: 260px; }
   .pdp-confirm { left: 0; right: 0; margin: 0 auto; }
+  .pdp-footer .pdp-logo-img { height: 64px; }
+  .pdp-lang-menu { position: fixed; left: 12px; right: 12px; top: 60px; min-width: 0; max-height: 70vh; }
+  .pdp-lang-btn { padding: 5px 8px; font-size: 0.6rem; gap: 4px; }
+  .pdp-lang-globe { width: 12px; height: 12px; }
+  .pdp-lang-caret { font-size: 0.55rem; }
 }
 
 /* ---------- Accessibilité : mouvement réduit ---------- */

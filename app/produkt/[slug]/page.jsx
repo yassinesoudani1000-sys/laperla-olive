@@ -108,9 +108,8 @@ export default async function ProductPage({ params }) {
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
           <span data-pd="back">Kollektion</span>
         </a>
-        <a className="pdp-brand" href="/" data-pd-aria="brandAria" aria-label="LAPERLA Olive Oil — Startseite">
-          <span className="pdp-brand-name">La Perla</span>
-          <span className="pdp-brand-sub">Édition Prestige</span>
+        <a className="pdp-logo" href="/" data-pd-aria="brandAria" aria-label="LAPERLA Olive Oil — Startseite">
+          <img className="pdp-logo-img" alt="Laperla" src="/images/laperla.webp" fetchPriority="high" decoding="async"/>
         </a>
         <div className="pdp-top-right">
           <PdpI18n productId={p.id} />
@@ -260,9 +259,8 @@ export default async function ProductPage({ params }) {
       {/* ---- Pied de page ---- */}
       <div className="pdp-footer" role="contentinfo">
         <div className="wrap pdp-footer-inner">
-          <a className="pdp-brand" href="/" data-pd-aria="brandAria" aria-label="LAPERLA Olive Oil — Startseite">
-            <span className="pdp-brand-name">La Perla</span>
-            <span className="pdp-brand-sub">Édition Prestige</span>
+          <a className="pdp-logo" href="/" data-pd-aria="brandAria" aria-label="LAPERLA Olive Oil — Startseite">
+            <img className="pdp-logo-img" alt="Laperla" src="/images/laperla.webp" loading="lazy" decoding="async"/>
           </a>
           <nav aria-label="Footer">
             <a href="/#shop" data-pd="bcCollection">Kollektion</a>
