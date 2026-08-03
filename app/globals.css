@@ -11520,4 +11520,54 @@ a.hero-award-text:hover{opacity:.85;transform:translateY(-1px)}
   .header-logo-img{height:85px}
   .cart-count{right:-5px;top:-6px}
 }
+
+/* ══════════════════════════════════════════════════
+   FIX GATE MOBILE — cartes visibles sur petit écran
+   ══════════════════════════════════════════════════ */
+
+/* Gate : scrollable sur mobile, ne plus centrer en flex */
+@media(max-width:680px){
+  #gate{
+    justify-content:flex-start !important;
+    overflow-y:auto !important;
+    -webkit-overflow-scrolling:touch;
+    padding:24px 20px 40px !important;
+  }
+  .gate-brand-img{
+    height:min(28vh,200px) !important;
+    width:auto;
+  }
+  .gate-brand{margin-bottom:4px !important}
+  .gate-awards-line{
+    margin-top:.8rem !important;
+    font-size:.58rem !important;
+    letter-spacing:.16em !important;
+  }
+  .gate-paths{
+    margin-top:1.2rem !important;
+    gap:12px !important;
+    padding:0 4px !important;
+    flex-direction:column !important;
+    align-items:center;
+    width:100%;
+  }
+  #gate .path-card{
+    width:100% !important;
+    max-width:320px !important;
+    padding:22px 20px !important;
+  }
+  #gate .path-card h3{
+    font-size:1.6rem !important;
+  }
+  #gate .path-card p{
+    min-height:auto !important;
+    font-size:.8rem !important;
+  }
+}
+
+@media(max-width:400px){
+  .gate-brand-img{height:min(22vh,160px) !important}
+  #gate .path-card{padding:18px 16px !important}
+  #gate .path-card h3{font-size:1.4rem !important}
+}
 #page-shop .pc-medal-text{display:block;font-size:.33rem;letter-spacing:.07em;text-transform:uppercase;font-weight:800;max-width:42px;word-break:break-word;pointer-events:none}
