@@ -1,0 +1,15 @@
+.next
+node_modules
+.git
+*.md
+session-ses_*
+test_css.js
+test_style.js
+extract-*.py
+extract-*.js
+generate-*.py
+build-*.js
+create-routes.sh
+add_i18n_keys.py
+reduce-languages.py
+86 claude v2 2.html
