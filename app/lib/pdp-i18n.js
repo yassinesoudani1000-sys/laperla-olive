@@ -390,6 +390,22 @@ export const PDP_UI = {
     "es": "Seguir comprando",
     "ar": "مواصلة التسوق"
   },
+  "emptyCart": {
+    "de": "Dein Warenkorb ist noch leer.",
+    "en": "Your cart is empty.",
+    "fr": "Votre panier est vide.",
+    "it": "Il carrello è vuoto.",
+    "es": "Tu carrito está vacío.",
+    "ar": "سلتك فارغة"
+  },
+  "checkout": {
+    "de": "Bestellanfrage starten",
+    "en": "Proceed to checkout",
+    "fr": "Passer la commande",
+    "it": "Procedi all'ordine",
+    "es": "Realizar pedido",
+    "ar": "متابعة الطلب"
+  },
   "bottle": {
     "de": "Flasche",
     "en": "Bottle",

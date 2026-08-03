@@ -442,6 +442,11 @@ section{padding:110px 0}
 .drawer-overlay.open{opacity:1;visibility:visible}
 .cart-drawer{position:fixed;top:0;right:0;height:100%;width:min(430px,100%);background:var(--ivory);z-index:121;transform:translateX(100%);transition:transform .5s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column;box-shadow:-30px 0 80px -30px rgba(22,20,15,.5)}
 .cart-drawer.open{transform:translateX(0)}
+/* ---------- Accès direct au panier depuis les pages produit (/?openCart=1) ---------- */
+/* Empêche le flash de la page + gate (z-index:1000) de recouvrir le panier (z-index:121) */
+html.cart-preopen #gate{opacity:0!important;visibility:hidden!important;pointer-events:none!important}
+html.cart-preopen .drawer-overlay{opacity:1!important;visibility:visible!important;transition:none!important}
+html.cart-preopen .cart-drawer{transform:translateX(0)!important;transition:none!important}
 .cart-head{display:flex;justify-content:space-between;align-items:center;padding:26px;border-bottom:1px solid var(--line)}
 .cart-head h3{font-family:var(--serif);font-size:1.5rem;font-weight:600}
 .cart-close{font-size:1.4rem;color:var(--ink-soft)}
