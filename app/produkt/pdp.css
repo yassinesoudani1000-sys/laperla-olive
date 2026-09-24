@@ -307,8 +307,8 @@ html.pdp-i18n-loading [data-pd-medal] {
 .pdp-stage img {
   position: relative;
   z-index: 1;
-  max-height: 540px;
-  max-width: 85%;
+  max-height: 800px;
+  max-width: 90%;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 30px 36px rgba(0, 0, 0, 0.75));
